@@ -1,546 +1,629 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
+    <title>Erwin Setiawan — Data Analyst Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Erwin Setiawan — Data Analyst & Software Engineering (S.Kom). Skilled in Python, SQL, Tableau, Excel, and Machine Learning."
     />
-    <!-- aos -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link
-      href="//db.onlinewebfonts.com/c/021f3eb1da35b2a042907dc870c00b9c?family=TwentiethCenturyW01-XBdCn"
       rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link rel="stylesheet" href="assets/stylesheet/app.css" />
-    <link rel="stylesheet" href="assets/stylesheet/responsive.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Vampiro+One&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.css"
-    />
-    <title>Erwin Profile</title>
+    <link rel="icon" href="assets/img/porto.png" type="image/png" />
   </head>
-
   <body>
-    <ul class="nav justify-content-center bg-light fixed-top">
-      <li class="nav-item">
-        <!-- <a class="nav-link" href="#"> -->
-        <a
-          class="buttonToggle"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions"
-          ><i class="fas fa-bars toggleSlide"></i
-        ></a>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-inner">
+        <a href="#home" class="brand">erwin<span>.</span></a>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#achievement">Achievements</a></li>
+          <li><a href="#certification">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </nav>
 
-        <div
-          class="offcanvas offcanvas-start"
-          data-bs-scroll="true"
-          tabindex="-1"
-          id="offcanvasWithBothOptions"
-          aria-labelledby="offcanvasWithBothOptionsLabel"
-        >
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              Please select a menu :
-            </h5>
-            <button
-              type="button"
-              class="btn-close text-reset"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
+    <!-- HERO -->
+    <header class="hero" id="home">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="hero-grid">
+        <div class="hero-left">
+          <p class="hero-tag reveal">Hello, I'm</p>
+          <h1 class="hero-name reveal">Erwin Setiawan</h1>
+          <div class="hero-role reveal">
+            <span id="typewriter"></span><span class="cursor">|</span>
           </div>
-          <div class="offcanvas-body">
-            <ul>
-              <li>
-                <a class="nav-link" href="#Biodata">Biodata</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Achievements">Achievements</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Projects">Projects</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Certifications">Certifications</a>
-              </li>
-              <li>
-                <a class="nav-link" href="#Contact">Contact</a>
-              </li>
-            </ul>
+          <p class="hero-desc reveal">
+            Data Analyst &amp; Fresh Graduate of Informatics Engineering (S.Kom) with hands-on
+            experience in <strong>Python, SQL, Excel &amp; Tableau</strong>. Completed an
+            independent study at <strong>Bitlabs Academy (MSIB Batch 7)</strong> on Data Analytics
+            for Business and worked on a real-world case study with <strong>Dagangan.com</strong>.
+          </p>
+          <div class="hero-actions reveal">
+            <a href="#projects" class="btn btn-primary"
+              ><i class="fas fa-briefcase"></i> View My Work</a
+            >
+            <a href="https://github.com/0xErs" target="_blank" rel="noopener" class="btn btn-ghost"
+              ><i class="fab fa-github"></i> GitHub</a
+            >
+          </div>
+          <div class="hero-socials reveal">
+            <a
+              href="https://www.linkedin.com/in/erwinsetiawan046/"
+              target="_blank"
+              rel="noopener"
+              aria-label="LinkedIn"
+              ><i class="fab fa-linkedin-in"></i
+            ></a>
+            <a href="https://github.com/0xErs" target="_blank" rel="noopener" aria-label="GitHub"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="mailto:erwinsetyawan37@gmail.com" aria-label="Email"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+            <a
+              href="https://instagram.com/@errrwiin"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.tiktok.com/@0xers8"
+              target="_blank"
+              rel="noopener"
+              aria-label="TikTok"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a
+              href="https://youtube.com/@_ErwinSetiawan"
+              target="_blank"
+              rel="noopener"
+              aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
           </div>
         </div>
-        <!-- </a> -->
-      </li>
-      <li class="nav-item">
-        <a class="nav-link initial" href="#" aria-current="page">Erwin</a>
-      </li>
-
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Biodata">Biodata</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Achievements">Achievements</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Projects">Projects</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Certifications">Certifications</a>
-      </li>
-      <li class="nav-item-item">
-        <a class="nav-link" href="#Contact">Contact</a>
-      </li>
-    </ul>
-    <div class="all-body-cover">
-      <img
-        width="200px"
-        src="assets/img/profileImage.jpg"
-        class="img-thumbnail rounded-circle mx-auto d-block"
-        alt="..."
-      />
-      <div class="nama">
-        <h4 class="text-center fw-bold">Erwin Setiawan</h4>
-        <h5 class="text-center">Junior Programer</h5>
-      </div>
-
-      <svg
-        class="waves"
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1440 320"
-      >
-        <path
-          fill="#ffffff"
-          fill-opacity="1"
-          d="M0,160L48,149.3C96,139,192,117,288,144C384,171,480,245,576,272C672,299,768,277,864,250.7C960,224,1056,192,1152,186.7C1248,181,1344,203,1392,213.3L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-        ></path>
-      </svg>
-      <div class="firstContainer">
-        <div class="content">
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="800"
-            id="Biodata"
-            class="nameHeading fw-bold"
-          >
-            BIODATA
-          </h2>
-          <div class="container text-center">
-            <div class="row">
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-4 mb-2"
-              >
-                Hello, let me introduce my self, my name is Erwin Setiawan, usually called Erwin,
-                I am a 4th semester student majoring in Informatics Engineering. I have a high interest in technology and information, especially data analysis. My learning motivation 
-                is to take part in off-campus data analyst bootcamps and workshops to improve my understanding of basic 
-                concepts in data analysis, expand my professional network by meeting and learning 
-                from the best practitioners in the industry, and gain the practical skills needed to face 
-                real-world challenges in job as a data analyst.
-              </div>
-              <div
-                data-aos="fade-up"
-                data-aos-duration="800"
-                class="col-sm-4 mb-2"
-              >
-                <h4 class="subNameHeading fw-bold">EDUCATION</h4>
-                <div class="education">
-                  <!-- Button trigger modal -->
-                  <p class="startEnd">Started on Jul 2016</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal2"
-                  >
-                    SMPN 1 Berbek
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal2"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Achievement
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">champion in the class</div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="startEnd">Finished on Jun 2019</p>
-                  <i class="fas fa-arrow-circle-down itemEdu"></i>
-                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
-                  <p class="startEnd">Started on Jul 2019</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal3"
-                  >
-                    SMKN 1 Nganjuk
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal3"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Achievement
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          1. champion in the class <br />
-                          2. Microsoft office webinar resource persons. <br />
-                        </div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <p class="startEnd">Finished on Jun 2022</p>
-                  <i class="fas fa-arrow-circle-down itemEdu"></i>
-                  <!-- <i class="fas fa-arrow-circle-down itemEdu"></i> -->
-                  <p class="startEnd">Started on</p>
-                  <button
-                    type="button"
-                    class="btn btn-danger itemEdu"
-                    data-bs-toggle="modal"
-                    data-bs-target="#exampleModal4"
-                  >
-                    Universitas Nusantara PGRI Kediri
-                  </button>
-
-                  <!-- Modal -->
-                  <div
-                    class="modal fade"
-                    id="exampleModal4"
-                    tabindex="-1"
-                    aria-labelledby="exampleModalLabel"
-                    aria-hidden="true"
-                  >
-                    <div class="modal-dialog">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">
-                            Achievement
-                          </h5>
-                          <button
-                            type="button"
-                            class="btn-close"
-                            data-bs-dismiss="modal"
-                            aria-label="Close"
-                          ></button>
-                        </div>
-                        <div class="modal-body">
-                          1. Participants in the 2023 Gemastik XV ICT UGM Scientific Writing Competition <br />
-                          2. Participants in the 2023 Inotek Nganjuk Economic Sector Competition (Hole Detection Tool on Highways) <br />
-                          3. 2024 PKM-KC Participants (Soil Ph Detection Tool) <br />
-                          4. Participants in the Kediri Inotek Competition in Economics 2023 (E-Taylor Website) 
-                        </div>
-                        <div class="modal-footer">
-                          <button
-                            type="button"
-                            class="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div data-aos="fade-up" data-aos-duration="800" class="col-sm-4">
-                Previously, I head
-                Intership experience for 6 monts during vocational school in the production sector as a helper.
-                This experience broadened my understanding of production processes, work discipline, 
-                and adaptability in different work environments.
-              </div>
-            </div>
+        <div class="hero-right reveal">
+          <div class="photo-frame">
+            <img src="assets/img/Profile.png" alt="Erwin Setiawan" />
+            <div class="photo-badge"><i class="fas fa-laptop-code"></i></div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- second -->
-    <div class="secondContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Achievements"
-        class="achive fw-bold"
-      >
-        ACHIEVEMENTS
-      </h2>
-      <div class="container mx-auto">
-        <div class="row">
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Organization</div>
-              <div class="card-body">
-                <h5 class="card-title">Nusantara Code Community</h5>
-                <p class="card-text">
-                  As Vice Chair of the NCode community, 
-                  I am responsible for organizing various activities and events 
-                  aimed at improving programming and technology skills among members
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Competence</div>
-              <div class="card-body">
-                <h5 class="card-title">Team</h5>
-                <p class="card-text">
-                  Become a participant in the 2023 Nganjuk Technology Innovation competition, 
-                  participant in PKM-KC 2024 (Soil Ph Detection System). Participants in the Kediri Inotek Competition in Economics 2023 (E-Taylor Website)
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Soft Skill and Hard Skill</div>
-              <div class="card-body">
-                <h5 class="card-title">Junior Student Programming </h5>
-                <p class="card-text">
-                  Understand the basics of HTML, CSS, Bootstrap, Python, SQL programming.
-                  Operated Basic Ms.Office, Communication Skill, Decision-making, Critical Thinking
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div
-              data-aos="fade-up"
-              data-aos-duration="800"
-              class="card text-dark mb-3 mx-auto"
-              style="max-width: 18rem"
-            >
-              <div class="card-header">Tools</div>
-              <div class="card-body">
-                <h5 class="card-title">The one I use</h5>
-                <p class="card-text">
-                  Visual Studio Code (Intermediate), Ms. Office (Basic), Canva (Intermediate), MySQL Workbench (Intermediate), Google Collab (Basic)
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- third -->
-    <svg
-      class="wavesss"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,0L48,53.3C96,107,192,213,288,234.7C384,256,480,192,576,181.3C672,171,768,213,864,245.3C960,277,1056,299,1152,298.7C1248,299,1344,277,1392,266.7L1440,256L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="thirdContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Projects"
-        class="projects fw-bold"
-      >
-        PROJECTS
-      </h2>
-      <div class="categoryy">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div data-aos="fade-up" data-aos-duration="800" class="col">
-              <div class="article-container-firstRow text-uppercase mx-auto">
-                <a
-                  href="https://youtu.be/cZeBIhjeLIw?si=eiiJI9zqDD3Xrsn2"
-                  style="text-decoration: none"
-                >
-                  <div class="article-img-holder-firstRow"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <svg
-      class="botWaves"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,64L48,101.3C96,139,192,213,288,224C384,235,480,181,576,181.3C672,181,768,235,864,229.3C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"
-      ></path>
-    </svg>
-    <div class="fourthContainer">
-      <h2
-        data-aos="fade-up"
-        data-aos-duration="800"
-        id="Certifications"
-        class="achive text-center fw-bold"
-      >
-        CERTIFICATION
-      </h2>
+      <a href="#about" class="scroll-hint"><i class="fas fa-chevron-down"></i></a>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section section-dark" id="about">
       <div class="container">
-        <div
-          data-aos="fade-up"
-          data-aos-duration="800"
-          class="table-responsive"
-        >
-          <table class="table mx-auto table-hover table-light table-striped">
+        <p class="section-label reveal">who I am</p>
+        <h2 class="section-title reveal">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              A fresh graduate who loves turning messy data into clear, actionable stories. I'm most
+              interested in
+              <strong>data analysis, business intelligence, and machine learning</strong>.
+            </p>
+            <p>
+              I completed the <strong>MSIB Kampus Merdeka Batch 7</strong> independent study at
+              Bitlabs Academy on Data Analytics for Business, where I scored
+              <strong>80.45/100</strong> and delivered a group project for
+              <strong>Dagangan.com</strong> — optimizing product distribution routes using the
+              Traveling Salesman Problem (TSP) algorithm.
+            </p>
+            <p>
+              Currently, I work part-time as a
+              <strong>Robotics &amp; Programming Instructor at Ruang Robot</strong>, teaching
+              Arduino, PictoBlox, Python, and block coding to students — sharpening both my
+              technical fundamentals and my ability to explain complex ideas simply.
+            </p>
+            <p>
+              My final project thesis:
+              <em
+                >Gold Price Forecasting Using LSTM with Federal Reserve (FFR) and NFP indicators</em
+              >
+              — applying deep learning to financial time-series data.
+            </p>
+          </div>
+          <div class="about-facts reveal">
+            <div class="fact">
+              <span>Degree</span><strong>S.Kom — Informatics Engineering</strong>
+            </div>
+            <div class="fact"><span>GPA</span><strong>3.80 / 4.00</strong></div>
+            <div class="fact"><span>Base</span><strong>Nganjuk, Jawa Timur</strong></div>
+            <div class="fact">
+              <span>Focus</span><strong>Data Analysis · BI · ML · Web Apps</strong>
+            </div>
+            <div class="fact">
+              <span>Teaching</span><strong>Robotics &amp; Programming (1+ yr)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-label reveal">my journey</p>
+        <h2 class="section-title reveal">Experience</h2>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-marker"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Robotics &amp; Programming Instructor</h3>
+                  <p class="tl-org">Ruang Robot · Kediri</p>
+                </div>
+                <span class="tl-date">Jan 2025 — Present</span>
+              </div>
+              <ul>
+                <li>
+                  Teach private &amp; group coding/robotics lessons for elementary &amp; junior high
+                  students using Arduino, PictoBlox, EV3, and electronic sensors.
+                </li>
+                <li>
+                  Develop teaching modules independently: block coding, Scratch, Python (functions,
+                  data structures, file handling, mini-projects) and C++ (OOP, loops).
+                </li>
+                <li>
+                  Design curriculum and hands-on mini-projects (soldering basics, IoT demos) adapted
+                  to each student's level.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-marker"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>MSIB Kampus Merdeka Batch 7 — Data Analytics for Business</h3>
+                  <p class="tl-org">Bitlabs Academy (PT Indobit Digital Raya)</p>
+                </div>
+                <span class="tl-date">Sep 2024 — Dec 2024</span>
+              </div>
+              <ul>
+                <li>
+                  Mastered Excel (PivotTables, Power Query, dashboarding), SQL (CTE, window
+                  functions, cleaning), Tableau (interactive dashboards), and Python (Pandas, NumPy,
+                  Matplotlib, basic ML).
+                </li>
+                <li>
+                  Completed group <strong>PBL with Dagangan.com</strong>: optimized distribution
+                  routes using the TSP algorithm — reduced distance &amp; delivery costs with
+                  data-driven recommendations.
+                </li>
+                <li>
+                  Delivered midterm case study on hotel booking data (26K+ transactions, 33K+
+                  sales-visit records) with end-to-end data cleaning &amp; insights.
+                </li>
+                <li>Scored <strong>80.45/100</strong> with official certification.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-marker"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Apprenticeship — Production Helper</h3>
+                  <p class="tl-org">PT Dika Teknik Madiun</p>
+                </div>
+                <span class="tl-date">Jan 2021 — Jun 2021</span>
+              </div>
+              <ul>
+                <li>
+                  Assisted production processes: raw-material preparation &amp; management, machine
+                  tool operation.
+                </li>
+                <li>
+                  Supported special project implementation alongside permanent workers &amp; project
+                  managers.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-marker"></div>
+            <div class="tl-card">
+              <div class="tl-head">
+                <div>
+                  <h3>Deputy Chair — Nusantara Code Community</h3>
+                  <p class="tl-org">Universitas Nusantara PGRI Kediri</p>
+                </div>
+                <span class="tl-date">2022 — 2024</span>
+              </div>
+              <ul>
+                <li>
+                  Organized activities &amp; events to improve programming and tech skills among
+                  members.
+                </li>
+                <li>
+                  Led team &amp; event management, building leadership and project-management
+                  skills.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section section-dark" id="projects">
+      <div class="container">
+        <p class="section-label reveal">what I've built</p>
+        <h2 class="section-title reveal">Projects</h2>
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-chart-line p-icon"></i>
+              <span class="p-tag">Machine Learning</span>
+            </div>
+            <h3>Gold Price Forecasting with LSTM</h3>
+            <p>
+              Thesis project: forecasting gold prices using an LSTM neural network with Federal
+              Reserve (FFR) and NFP indicators — including lag &amp; log-domain feature engineering
+              and ARIMAX comparison.
+            </p>
+            <div class="p-tech">
+              <span>Python</span><span>LSTM</span><span>Keras</span><span>Time Series</span>
+            </div>
+            <a
+              href="https://github.com/0xErs/Gold-Forecast-LSTM"
+              target="_blank"
+              rel="noopener"
+              class="p-link"
+              >View project <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-route p-icon"></i>
+              <span class="p-tag">Data Analytics · BI</span>
+            </div>
+            <h3>Route Optimization (TSP) — Dagangan.com</h3>
+            <p>
+              Group PBL case study on product distribution: applied the Traveling Salesman Problem
+              algorithm to optimize sales routes, with Python cleaning, geolocation processing, and
+              interactive Tableau/map dashboards.
+            </p>
+            <div class="p-tech">
+              <span>Python</span><span>Pandas</span><span>Tableau</span><span>SQLite</span
+              ><span>Maps</span>
+            </div>
+            <a href="#contact" class="p-link"
+              >Case study request <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-hotel p-icon"></i>
+              <span class="p-tag">Data Cleaning</span>
+            </div>
+            <h3>Hotel Bookings Data Analysis (MSIB Midterm)</h3>
+            <p>
+              Cleaned and analyzed 26K+ transactions &amp; 33K+ sales-visit records with pandas —
+              handling duplicates, missing values, and coordinate consistency to produce a
+              business-ready dataset with insights.
+            </p>
+            <div class="p-tech"><span>Pandas</span><span>NumPy</span><span>Excel</span></div>
+            <a href="#contact" class="p-link"
+              >Request notebook <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-globe p-icon"></i>
+              <span class="p-tag">Web Development</span>
+            </div>
+            <h3>Website Profil Pakelan (KKN)</h3>
+            <p>
+              Interactive village-profile website with location maps, place-of-worship markers, and
+              community info — deployed on GitHub Pages and used by the KKN team and village
+              community.
+            </p>
+            <div class="p-tech">
+              <span>HTML/CSS</span><span>JavaScript</span><span>GitHub Pages</span>
+            </div>
+            <a
+              href="https://github.com/kknt-pakelan/profil-pakelan"
+              target="_blank"
+              rel="noopener"
+              class="p-link"
+              >View source <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-brain p-icon"></i>
+              <span class="p-tag">AI · Web App</span>
+            </div>
+            <h3>CodeQuest — AI Quiz Generator</h3>
+            <p>
+              Web app that generates custom programming questions across topics and languages using
+              the Gemini AI model (TypeScript + Vite).
+            </p>
+            <div class="p-tech"><span>TypeScript</span><span>Vite</span><span>Gemini AI</span></div>
+            <a
+              href="https://github.com/0xErs/CodeQuest---Latihan-Logika"
+              target="_blank"
+              rel="noopener"
+              class="p-link"
+              >View project <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-store p-icon"></i>
+              <span class="p-tag">E-Commerce</span>
+            </div>
+            <h3>E-Taylor — Multi-vendor Website</h3>
+            <p>
+              Multi-vendor e-tailer using Laravel to connect tailors and clients — vendor
+              management, product listings, and order processing. Presented at Inotek Kediri 2023
+              competition.
+            </p>
+            <div class="p-tech"><span>Laravel</span><span>PHP</span><span>MySQL</span></div>
+            <a href="#contact" class="p-link">More info <i class="fas fa-arrow-right"></i></a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="p-top">
+              <i class="fas fa-database p-icon"></i>
+              <span class="p-tag">Database</span>
+            </div>
+            <h3>Pharmacy Database</h3>
+            <p>
+              Designed a pharmacy database using DDL/DML, inner &amp; outer joins, views, and stored
+              procedures for efficient storage and management of pharmacy data.
+            </p>
+            <div class="p-tech">
+              <span>SQL</span><span>MySQL</span><span>Stored Procedures</span>
+            </div>
+            <a href="#contact" class="p-link"
+              >Details on request <i class="fas fa-arrow-right"></i
+            ></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <p class="section-label reveal">what I use</p>
+        <h2 class="section-title reveal">Skills &amp; Tools</h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3><i class="fas fa-code"></i> Programming</h3>
+            <div class="skill-chips">
+              <span>Python</span><span>SQL</span><span>HTML/CSS</span><span>Bootstrap</span
+              ><span>C++ (OOP)</span><span>Scratch/PictoBlox</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3><i class="fas fa-chart-pie"></i> Data Analysis</h3>
+            <div class="skill-chips">
+              <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Tableau</span
+              ><span>Microsoft Excel</span><span>Streamlit</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3><i class="fas fa-robot"></i> Machine Learning</h3>
+            <div class="skill-chips">
+              <span>LSTM</span><span>ARIMAX</span><span>SARIMA</span
+              ><span>Scikit-learn (basic)</span><span>Predictive Modeling</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3><i class="fas fa-toolbox"></i> Tools</h3>
+            <div class="skill-chips">
+              <span>VS Code</span><span>Git / GitHub</span><span>Google Colab</span
+              ><span>Tableau Public</span><span>DBeaver</span><span>MySQL</span
+              ><span>PostgreSQL</span><span>SQLite</span><span>Canva</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENT -->
+    <section class="section section-dark" id="achievement">
+      <div class="container">
+        <p class="section-label reveal">milestones</p>
+        <h2 class="section-title reveal">Achievements</h2>
+        <div class="ach-grid">
+          <div class="ach-card reveal">
+            <i class="fas fa-award"></i>
+            <h3>MSIB Kampus Merdeka Batch 7</h3>
+            <p>
+              Completed Data Analytics for Business at Bitlabs Academy — score
+              <strong>80.45/100</strong>.
+            </p>
+          </div>
+          <div class="ach-card reveal">
+            <i class="fas fa-users"></i>
+            <h3>Deputy Chair</h3>
+            <p>Nusantara Code (NCode) community — organized programming events for students.</p>
+          </div>
+          <div class="ach-card reveal">
+            <i class="fas fa-trophy"></i>
+            <h3>Gemastik XV</h3>
+            <p>Selected participant in the 2022 ICT Scientific Writing Competition.</p>
+          </div>
+          <div class="ach-card reveal">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Inotek &amp; PKM</h3>
+            <p>
+              Founded + presented at Inotek Nganjuk/Kediri 2023-2024 and PKM-KC 2024 (IoT &amp; SVR
+              projects).
+            </p>
+          </div>
+          <div class="ach-card reveal">
+            <i class="fas fa-microchip"></i>
+            <h3>PKL IoT Projects</h3>
+            <p>
+              Designed &amp; presented automated tools — smart window, incubator temperature
+              monitoring (Metamorphosis Kupu-Kupu).
+            </p>
+          </div>
+          <div class="ach-card reveal">
+            <i class="fas fa-language"></i>
+            <h3>TOEFL</h3>
+            <p>Certified in English (reading &amp; writing proficiency).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section" id="certification">
+      <div class="container">
+        <p class="section-label reveal">credentials</p>
+        <h2 class="section-title reveal">Certifications</h2>
+        <div class="cert-table-wrap reveal">
+          <table class="cert-table">
             <thead>
               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Organizer</th>
-                <th scope="col">Date</th>
-                <th scope="col">Credential</th>
+                <th>#</th>
+                <th>Name</th>
+                <th>Organizer</th>
+                <th>Date</th>
+                <th>Credential</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th scope="row">1</th>
-                <td>Gemastik XV Scientific Writing Competition in ICT</td>
-                <td>Puspernas</td>
-                <td>November 22, 2022</td>
+                <td>1</td>
+                <td>MSIB Kampus Merdeka — Data Analytics for Business</td>
+                <td>Bitlabs Academy</td>
+                <td>Dec 2024</td>
                 <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/12UZeycCujyyJfoV4eyZI0rnXa5DZCxew/view?usp=sharing" role="button"
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1OtyqvS585rmRi1JFmo_00i1ByXqcCKhU/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener"
                     >View</a
                   >
                 </td>
               </tr>
               <tr>
-                <th scope="row">2</th>
-                <td>Workshop on OOP in Python</td>
-                <td>IT Study Program FT-IK UNP Kediri</td>
-                <td>June 24, 2023</td>
+                <td>2</td>
+                <td>Group Project Based Learning Certificate</td>
+                <td>Bitlabs Academy</td>
+                <td>Dec 2024</td>
                 <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1TLMO9gliCWgPw2qQ6gtO_gYEj8U-t-LO/view?usp=drive_link" role="button"
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1S_-KmU6PJulnedX7gU0yXIUSD7K7iM8u/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
                     >View</a
                   >
                 </td>
               </tr>
               <tr>
-                <th scope="row">3</th>
-                <td>Start Your Career as Data Analytic with Microsoft Excel</td>
-                <td>Edspert.id</td>
-                <td>June 22, 2023</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1cD0DFu3BVVMZK40D_8DzjpKN8xgcHzuU/view?usp=sharing" role="button"
-                    >View</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">4</th>
-                <td>Workshop on Game Maker 2 with Construct</td>
-                <td>IT Study Program FT-IK UNP Kediri</td>
-                <td>January 13, 2024</td>
-                <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1CZALhX3JXlGrcziM9LmYiHeQpXG898IX/view?usp=sharing" role="button"
-                    >View</a
-                  >
-                </td>
-              </tr>
-              <tr>
-                <th scope="row">5</th>
+                <td>3</td>
                 <td>International Bootcamp Data Analyst</td>
                 <td>Smartpath</td>
-                <td>May 28, 2024</td>
+                <td>May 2024</td>
                 <td>
-                  <a class="btn btn-primary mx-info" href="https://drive.google.com/file/d/1Hp4mp8AYFx9qRTJpU6J0kI9WlvaZM9gW/view?usp=drive_link" role="button"
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1Hp4mp8AYFx9qRTJpU6J0kI9WlvaZM9gW/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Start Your Career as Data Analyst with Microsoft Excel</td>
+                <td>Edspert.id</td>
+                <td>Jun 2023</td>
+                <td>
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1cD0DFu3BVVMZK40D_8DzjpKN8xgcHzuU/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Workshop OOP Python</td>
+                <td>IT Study Program UNP Kediri</td>
+                <td>Jun 2023</td>
+                <td>
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1TLMO9gliCWgPw2qQ6gtO_gYEj8U-t-LO/view?usp=drive_link"
+                    target="_blank"
+                    rel="noopener"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>TOEFL</td>
+                <td>ROYAL ENGLISH</td>
+                <td>Nov 2025</td>
+                <td>
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/1cAGhV0SycG-XK8yMOJmaERmoack8IvGn/view"
+                    target="_blank"
+                    rel="noopener"
+                    >View</a
+                  >
+                </td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Gemastik XV — Scientific Writing in ICT</td>
+                <td>Puspernas</td>
+                <td>Nov 2022</td>
+                <td>
+                  <a
+                    class="btn btn-small"
+                    href="https://drive.google.com/file/d/12UZeycCujyyJfoV4eyZI0rnXa5DZCxew/view?usp=sharing"
+                    target="_blank"
+                    rel="noopener"
                     >View</a
                   >
                 </td>
@@ -549,65 +632,45 @@
           </table>
         </div>
       </div>
-    </div>
-    <svg
-      class="wavesContact"
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 320"
-    >
-      <path
-        fill="#ffffff"
-        fill-opacity="1"
-        d="M0,32L60,58.7C120,85,240,139,360,133.3C480,128,600,64,720,69.3C840,75,960,149,1080,154.7C1200,160,1320,96,1380,64L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"
-      ></path>
-    </svg>
-    <div class="fivethContainer">
-      <h2 id="Contact" class="contactMe fw-bold">CONTACT</h2>
-      <div class="container">
-        <div class="linkSosmed">
-          <a
-            class="itemSosmed"
-            href="https://www.linkedin.com/in/erwinsetiawan046/"
-            ><i class="fab fa-linkedin-in"></i
-          ></a>
-          <a class="itemSosmed" href="https://instagram.com/@errrwiin"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a class="itemSosmed" href="https://www.tiktok.com/@0xers8"
-            ><i class="fab fa-tiktok"></i
-          ></a>
-          <a class="itemSosmed" href="https://youtube.com/@_ErwinSetiawan"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a class="itemSosmed" href="erwinsetyawan37@gmail.com"
-            ><i class="fab fa-google"></i
-          ></a>
-          <a class="itemSosmed" href="https://github.com/0xErs"
-            ><i class="fab fa-github"></i
-          ></a>
-        </div>
-        <p class="text-center">CopyRight <a href="#">@erwin</a></p>
-      </div>
-    </div>
-    <script src="assets/stylesheet/app.js"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
+    </section>
 
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.rawgit.com/michalsnik/aos/2.0.1/dist/aos.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
+    <!-- CONTACT -->
+    <section class="section section-accent" id="contact">
+      <div class="container">
+        <p class="section-label reveal">let's talk</p>
+        <h2 class="section-title reveal">Get In Touch</h2>
+        <p class="contact-note reveal">
+          Open to Data Analyst, Business Intelligence, and Web Development opportunities.
+        </p>
+        <div class="contact-links reveal">
+          <a href="mailto:erwinsetyawan37@gmail.com" class="contact-card">
+            <i class="fa-solid fa-envelope"></i><span>erwinsetyawan37@gmail.com</span>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/erwinsetiawan046/"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+            <i class="fab fa-linkedin-in"></i><span>LinkedIn</span>
+          </a>
+          <a href="https://github.com/0xErs" target="_blank" rel="noopener" class="contact-card">
+            <i class="fab fa-github"></i><span>GitHub</span>
+          </a>
+          <a href="tel:+6281234883185" class="contact-card">
+            <i class="fa-solid fa-phone"></i><span>+62 812-3488-3185</span>
+          </a>
+        </div>
+        <p class="copy">
+          © <span id="year"></span> Erwin Setiawan — Built with passion &amp; data.
+        </p>
+      </div>
+    </section>
+
+    <button class="to-top" id="toTop" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="assets/stylesheet/app.js"></script>
   </body>
 </html>
