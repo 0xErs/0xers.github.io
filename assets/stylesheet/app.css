@@ -731,6 +731,18 @@ img {
   transition-delay: 0.2s;
 }
 
+/* ---------- PRINT / PDF EXPORT ---------- */
+@media print {
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .navbar, .to-top, .scroll-hint { display: none !important; }
+  .blob { display: none !important; }
+  body { background: #0b0f1a !important; }
+  * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 860px) {
   .hero-grid {
