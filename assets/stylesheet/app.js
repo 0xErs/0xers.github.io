@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  var currentLang = localStorage.getItem("portfolio_lang") || "en";
+
   // ---- Navbar scroll effect ----
   var navbar = document.getElementById("navbar");
   function onScrollNav() {
@@ -24,41 +26,59 @@
   }
 
   // ---- Typewriter effect ----
-  var roles = [
-    "Data Analyst",
-    "Data Analytics for Business",
-    "Robotics Instructor",
-    "Python · SQL · Tableau",
-    "Machine Learning Enthusiast",
-  ];
   var el = document.getElementById("typewriter");
   var roleIndex = 0;
   var charIndex = 0;
   var deleting = false;
+  var typeTimeout = null;
+
+  function getRoles() {
+    var dict = window.PORTFOLIO_I18N && window.PORTFOLIO_I18N[currentLang];
+    return (dict && dict.roles) || [
+      "Data Analyst",
+      "Data Analytics for Business",
+      "Robotics Instructor",
+      "Python · SQL · Tableau",
+      "Machine Learning Enthusiast"
+    ];
+  }
 
   function type() {
+    var roles = getRoles();
+    if (roleIndex >= roles.length) roleIndex = 0;
     var current = roles[roleIndex];
+
     if (!deleting) {
       charIndex++;
-      el.textContent = current.substring(0, charIndex);
+      if (el) el.textContent = current.substring(0, charIndex);
       if (charIndex === current.length) {
         deleting = true;
-        setTimeout(type, 1600);
+        typeTimeout = setTimeout(type, 1600);
         return;
       }
-      setTimeout(type, 75);
+      typeTimeout = setTimeout(type, 75);
     } else {
       charIndex--;
-      el.textContent = current.substring(0, charIndex);
+      if (el) el.textContent = current.substring(0, charIndex);
       if (charIndex === 0) {
         deleting = false;
         roleIndex = (roleIndex + 1) % roles.length;
-        setTimeout(type, 400);
+        typeTimeout = setTimeout(type, 400);
         return;
       }
-      setTimeout(type, 40);
+      typeTimeout = setTimeout(type, 40);
     }
   }
+
+  function restartTypewriter() {
+    if (typeTimeout) clearTimeout(typeTimeout);
+    roleIndex = 0;
+    charIndex = 0;
+    deleting = false;
+    if (el) el.textContent = "";
+    type();
+  }
+
   if (el) setTimeout(type, 800);
 
   // ---- Scroll reveal ----
@@ -74,8 +94,8 @@
     },
     { threshold: 0.12 }
   );
-  revealEls.forEach(function (el) {
-    observer.observe(el);
+  revealEls.forEach(function (item) {
+    observer.observe(item);
   });
 
   // ---- Back to top ----
@@ -96,4 +116,57 @@
   // ---- Current year ----
   var year = document.getElementById("year");
   if (year) year.textContent = new Date().getFullYear();
+
+  // ---- i18n Translation Engine ----
+  function getNestedTranslation(obj, path) {
+    var parts = path.split(".");
+    var curr = obj;
+    for (var i = 0; i < parts.length; i++) {
+      if (curr == null) return null;
+      curr = curr[parts[i]];
+    }
+    return curr;
+  }
+
+  function setLanguage(lang) {
+    if (!window.PORTFOLIO_I18N || !window.PORTFOLIO_I18N[lang]) return;
+    currentLang = lang;
+    localStorage.setItem("portfolio_lang", lang);
+    document.documentElement.lang = lang;
+
+    var dict = window.PORTFOLIO_I18N[lang];
+
+    // Update all elements with data-i18n
+    var translatables = document.querySelectorAll("[data-i18n]");
+    translatables.forEach(function (elem) {
+      var key = elem.getAttribute("data-i18n");
+      var text = getNestedTranslation(dict, key);
+      if (text !== null && text !== undefined) {
+        elem.innerHTML = text;
+      }
+    });
+
+    // Update switcher active state
+    document.querySelectorAll(".lang-btn").forEach(function (btn) {
+      if (btn.getAttribute("data-lang") === lang) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+
+    // Restart typewriter with translated roles
+    restartTypewriter();
+  }
+
+  // Bind language switcher buttons
+  document.querySelectorAll(".lang-btn").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var lang = this.getAttribute("data-lang");
+      setLanguage(lang);
+    });
+  });
+
+  // Initial language setup
+  setLanguage(currentLang);
 })();

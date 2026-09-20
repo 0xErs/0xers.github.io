@@ -27,18 +27,24 @@
       <div class="nav-inner">
         <a href="#home" class="brand">erwin<span>.</span></a>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#achievement">Achievements</a></li>
-          <li><a href="#certification">Certifications</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#home" data-i18n="nav.home">Home</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+          <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#achievement" data-i18n="nav.achievement">Achievements</a></li>
+          <li><a href="#certification" data-i18n="nav.certification">Certifications</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
         </ul>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
-          <i class="fas fa-bars"></i>
-        </button>
+        <div class="nav-actions">
+          <div class="lang-switcher" aria-label="Language switcher">
+            <button type="button" class="lang-btn active" data-lang="en">EN</button>
+            <button type="button" class="lang-btn" data-lang="id">ID</button>
+          </div>
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
       </div>
     </nav>
 
@@ -48,23 +54,23 @@
       <div class="blob blob-2"></div>
       <div class="hero-grid">
         <div class="hero-left">
-          <p class="hero-tag reveal">Hello, I'm</p>
+          <p class="hero-tag reveal" data-i18n="hero.tag">Hello, I'm</p>
           <h1 class="hero-name reveal">Erwin Setiawan</h1>
           <div class="hero-role reveal">
             <span id="typewriter"></span><span class="cursor">|</span>
           </div>
-          <p class="hero-desc reveal">
-            Data Analyst &amp; Fresh Graduate of Informatics Engineering (S.Kom) with hands-on
+          <p class="hero-desc reveal" data-i18n="hero.desc">
+            Data Analyst &amp; Fresh Graduate of Informatics Engineering (S.Kom, Cum Laude) with hands-on
             experience in <strong>Python, SQL, Excel &amp; Tableau</strong>. Completed an
             independent study at <strong>Bitlabs Academy (MSIB Batch 7)</strong> on Data Analytics
             for Business and worked on a real-world case study with <strong>Dagangan.com</strong>.
           </p>
           <div class="hero-actions reveal">
             <a href="#projects" class="btn btn-primary"
-              ><i class="fas fa-briefcase"></i> View My Work</a
+              ><i class="fas fa-briefcase"></i> <span data-i18n="hero.viewWork">View My Work</span></a
             >
             <a href="https://github.com/0xErs" target="_blank" rel="noopener" class="btn btn-ghost"
-              ><i class="fab fa-github"></i> GitHub</a
+              ><i class="fab fa-github"></i> <span data-i18n="hero.github">GitHub</span></a
             >
           </div>
           <div class="hero-socials reveal">
@@ -117,29 +123,29 @@
     <!-- ABOUT -->
     <section class="section section-dark" id="about">
       <div class="container">
-        <p class="section-label reveal">who I am</p>
-        <h2 class="section-title reveal">About Me</h2>
+        <p class="section-label reveal" data-i18n="about.label">who I am</p>
+        <h2 class="section-title reveal" data-i18n="about.title">About Me</h2>
         <div class="about-grid">
           <div class="about-text reveal">
-            <p>
+            <p data-i18n="about.p1">
               A fresh graduate who loves turning messy data into clear, actionable stories. I'm most
               interested in
               <strong>data analysis, business intelligence, and machine learning</strong>.
             </p>
-            <p>
+            <p data-i18n="about.p2">
               I completed the <strong>MSIB Kampus Merdeka Batch 7</strong> independent study at
               Bitlabs Academy on Data Analytics for Business, where I scored
               <strong>80.45/100</strong> and delivered a group project for
               <strong>Dagangan.com</strong> — optimizing product distribution routes using the
               Traveling Salesman Problem (TSP) algorithm.
             </p>
-            <p>
+            <p data-i18n="about.p3">
               Currently, I work part-time as a
               <strong>Robotics &amp; Programming Instructor at Ruang Robot</strong>, teaching
               Arduino, PictoBlox, Python, and block coding to students — sharpening both my
               technical fundamentals and my ability to explain complex ideas simply.
             </p>
-            <p>
+            <p data-i18n="about.p4">
               My final project thesis:
               <em
                 >Gold Price Forecasting Using LSTM with Federal Reserve (FFR) and NFP indicators</em
@@ -149,15 +155,15 @@
           </div>
           <div class="about-facts reveal">
             <div class="fact">
-              <span>Degree</span><strong>S.Kom — Informatics Engineering</strong>
+              <span data-i18n="about.factDegreeLabel">Degree</span><strong data-i18n="about.factDegreeVal">S.Kom — Informatics (Cum Laude)</strong>
             </div>
-            <div class="fact"><span>GPA</span><strong>3.83 / 4.00</strong></div>
-            <div class="fact"><span>Base</span><strong>Nganjuk, Jawa Timur</strong></div>
+            <div class="fact"><span data-i18n="about.factGpaLabel">GPA</span><strong>3.83 / 4.00</strong></div>
+            <div class="fact"><span data-i18n="about.factBaseLabel">Base</span><strong data-i18n="about.factBaseVal">Nganjuk, East Java, Indonesia</strong></div>
             <div class="fact">
-              <span>Focus</span><strong>Data Analysis · BI · ML · Web Apps</strong>
+              <span data-i18n="about.factFocusLabel">Focus</span><strong data-i18n="about.factFocusVal">Data Analysis · BI · ML · Web Apps</strong>
             </div>
             <div class="fact">
-              <span>Teaching</span><strong>Robotics &amp; Programming (1+ yr)</strong>
+              <span data-i18n="about.factTeachingLabel">Teaching</span><strong data-i18n="about.factTeachingVal">Robotics &amp; Programming (1+ yr)</strong>
             </div>
           </div>
         </div>
@@ -167,29 +173,29 @@
     <!-- EXPERIENCE -->
     <section class="section" id="experience">
       <div class="container">
-        <p class="section-label reveal">my journey</p>
-        <h2 class="section-title reveal">Experience</h2>
+        <p class="section-label reveal" data-i18n="experience.label">my journey</p>
+        <h2 class="section-title reveal" data-i18n="experience.title">Experience</h2>
         <div class="timeline">
           <div class="tl-item reveal">
             <div class="tl-marker"></div>
             <div class="tl-card">
               <div class="tl-head">
                 <div>
-                  <h3>Robotics &amp; Programming Instructor</h3>
-                  <p class="tl-org">Ruang Robot · Kediri</p>
+                  <h3 data-i18n="experience.rrRole">Robotics &amp; Programming Instructor</h3>
+                  <p class="tl-org" data-i18n="experience.rrOrg">Ruang Robot · Kediri</p>
                 </div>
-                <span class="tl-date">Jan 2025 — Present</span>
+                <span class="tl-date" data-i18n="experience.rrDate">Jan 2025 — Present</span>
               </div>
               <ul>
-                <li>
+                <li data-i18n="experience.rrL1">
                   Teach private &amp; group coding/robotics lessons for elementary &amp; junior high
                   students using Arduino, PictoBlox, EV3, and electronic sensors.
                 </li>
-                <li>
+                <li data-i18n="experience.rrL2">
                   Develop teaching modules independently: block coding, Scratch, Python (functions,
                   data structures, file handling, mini-projects) and C++ (OOP, loops).
                 </li>
-                <li>
+                <li data-i18n="experience.rrL3">
                   Design curriculum and hands-on mini-projects (soldering basics, IoT demos) adapted
                   to each student's level.
                 </li>
@@ -201,28 +207,28 @@
             <div class="tl-card">
               <div class="tl-head">
                 <div>
-                  <h3>MSIB Kampus Merdeka Batch 7 — Data Analytics for Business</h3>
-                  <p class="tl-org">Bitlabs Academy (PT Indobit Digital Raya)</p>
+                  <h3 data-i18n="experience.blRole">MSIB Kampus Merdeka Batch 7 — Data Analytics for Business</h3>
+                  <p class="tl-org" data-i18n="experience.blOrg">Bitlabs Academy (PT Indobit Digital Raya)</p>
                 </div>
-                <span class="tl-date">Sep 2024 — Dec 2024</span>
+                <span class="tl-date" data-i18n="experience.blDate">Sep 2024 — Dec 2024</span>
               </div>
               <ul>
-                <li>
+                <li data-i18n="experience.blL1">
                   Completed a 10-week intensive program in Excel, SQL, Python, and Tableau, with weekly hands-on assignments on real-world industry datasets.
                 </li>
-                <li>
+                <li data-i18n="experience.blL2">
                   Built multi-chart Tableau dashboards (Week 10) on Sample Superstore &amp; Cosmetic Sales: sales target tracking, 6-month forecasting, 7-cluster product segmentation, regional store insights, and discount impact analysis.
                 </li>
-                <li>
+                <li data-i18n="experience.blL3">
                   Delivered a <strong>Dagangan.com</strong> capstone project (PBL): optimized distribution routes using the TSP algorithm in Python, with route visualization in Tableau.
                 </li>
-                <li>
+                <li data-i18n="experience.blL4">
                   Cleaned and analyzed logistics &amp; geospatial datasets (26,244 transactions; 33,728 sales-visit records) with Python (Pandas) and SQL, resolving duplicates, missing values, and coordinate inconsistencies.
                 </li>
-                <li>
+                <li data-i18n="experience.blL5">
                   Built interactive Tableau and Excel dashboards with LOD expressions (FIXED/INCLUDE/EXCLUDE), forecasting, clustering, and reference lines, plus a business presentation deck for stakeholders.
                 </li>
-                <li>Achieved a final capstone score of <strong>80.45/100</strong> with official certification.</li>
+                <li data-i18n="experience.blL6">Achieved a final capstone score of <strong>80.45/100</strong> with official certification.</li>
               </ul>
             </div>
           </div>
@@ -231,17 +237,17 @@
             <div class="tl-card">
               <div class="tl-head">
                 <div>
-                  <h3>Apprenticeship — Production Helper</h3>
-                  <p class="tl-org">PT Dika Teknik Madiun</p>
+                  <h3 data-i18n="experience.dtRole">Apprenticeship — Production Helper</h3>
+                  <p class="tl-org" data-i18n="experience.dtOrg">PT Dika Teknik Madiun</p>
                 </div>
-                <span class="tl-date">Jan 2021 — Jun 2021</span>
+                <span class="tl-date" data-i18n="experience.dtDate">Jan 2021 — Jun 2021</span>
               </div>
               <ul>
-                <li>
+                <li data-i18n="experience.dtL1">
                   Assisted production processes: raw-material preparation &amp; management, machine
                   tool operation.
                 </li>
-                <li>
+                <li data-i18n="experience.dtL2">
                   Supported special project implementation alongside permanent workers &amp; project
                   managers.
                 </li>
@@ -253,17 +259,17 @@
             <div class="tl-card">
               <div class="tl-head">
                 <div>
-                  <h3>Deputy Chair — Nusantara Code Community</h3>
-                  <p class="tl-org">Universitas Nusantara PGRI Kediri</p>
+                  <h3 data-i18n="experience.ncRole">Deputy Chair — Nusantara Code Community</h3>
+                  <p class="tl-org" data-i18n="experience.ncOrg">Universitas Nusantara PGRI Kediri</p>
                 </div>
-                <span class="tl-date">2022 — 2024</span>
+                <span class="tl-date" data-i18n="experience.ncDate">2022 — 2024</span>
               </div>
               <ul>
-                <li>
+                <li data-i18n="experience.ncL1">
                   Organized activities &amp; events to improve programming and tech skills among
                   members.
                 </li>
-                <li>
+                <li data-i18n="experience.ncL2">
                   Led team &amp; event management, building leadership and project-management
                   skills.
                 </li>
@@ -277,16 +283,16 @@
     <!-- PROJECTS -->
     <section class="section section-dark" id="projects">
       <div class="container">
-        <p class="section-label reveal">what I've built</p>
-        <h2 class="section-title reveal">Projects</h2>
+        <p class="section-label reveal" data-i18n="projects.label">what I've built</p>
+        <h2 class="section-title reveal" data-i18n="projects.title">Projects</h2>
         <div class="projects-grid">
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-chart-line p-icon"></i>
-              <span class="p-tag">Machine Learning</span>
+              <span class="p-tag" data-i18n="projects.p1Tag">Machine Learning</span>
             </div>
-            <h3>Gold Price Forecasting with LSTM</h3>
-            <p>
+            <h3 data-i18n="projects.p1Title">Gold Price Forecasting with LSTM</h3>
+            <p data-i18n="projects.p1Desc">
               Thesis project: forecasting gold prices using an LSTM neural network with Federal
               Reserve (FFR) and NFP indicators — including lag &amp; log-domain feature engineering
               and ARIMAX comparison.
@@ -299,17 +305,17 @@
               target="_blank"
               rel="noopener"
               class="p-link"
-              >View project <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p1Link">View project</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-route p-icon"></i>
-              <span class="p-tag">Data Analytics · BI</span>
+              <span class="p-tag" data-i18n="projects.p2Tag">Data Analytics · BI</span>
             </div>
-            <h3>Route Optimization (TSP) — Dagangan.com</h3>
-            <p>
+            <h3 data-i18n="projects.p2Title">Route Optimization (TSP) — Dagangan.com</h3>
+            <p data-i18n="projects.p2Desc">
               Group PBL case study on product distribution: applied the Traveling Salesman Problem
               algorithm to optimize sales routes, with Python cleaning, geolocation processing, and
               interactive Tableau/map dashboards.
@@ -319,34 +325,34 @@
               ><span>Maps</span>
             </div>
             <a href="#contact" class="p-link"
-              >Case study request <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p2Link">Case study request</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-hotel p-icon"></i>
-              <span class="p-tag">Data Cleaning</span>
+              <span class="p-tag" data-i18n="projects.p3Tag">Data Cleaning</span>
             </div>
-            <h3>Hotel Bookings Data Analysis (MSIB Midterm)</h3>
-            <p>
+            <h3 data-i18n="projects.p3Title">Hotel Bookings Data Analysis (MSIB Midterm)</h3>
+            <p data-i18n="projects.p3Desc">
               Cleaned and analyzed 26K+ transactions &amp; 33K+ sales-visit records with pandas —
               handling duplicates, missing values, and coordinate consistency to produce a
               business-ready dataset with insights.
             </p>
             <div class="p-tech"><span>Pandas</span><span>NumPy</span><span>Excel</span></div>
             <a href="#contact" class="p-link"
-              >Request notebook <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p3Link">Request notebook</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-globe p-icon"></i>
-              <span class="p-tag">Web Development</span>
+              <span class="p-tag" data-i18n="projects.p4Tag">Web Development</span>
             </div>
-            <h3>Website Profil Pakelan (KKN)</h3>
-            <p>
+            <h3 data-i18n="projects.p4Title">Website Profil Pakelan (KKN)</h3>
+            <p data-i18n="projects.p4Desc">
               Interactive village-profile website with location maps, place-of-worship markers, and
               community info — deployed on GitHub Pages and used by the KKN team and village
               community.
@@ -359,17 +365,17 @@
               target="_blank"
               rel="noopener"
               class="p-link"
-              >View source <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p4Link">View source</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-brain p-icon"></i>
-              <span class="p-tag">AI · Web App</span>
+              <span class="p-tag" data-i18n="projects.p5Tag">AI · Web App</span>
             </div>
-            <h3>CodeQuest — AI Quiz Generator</h3>
-            <p>
+            <h3 data-i18n="projects.p5Title">CodeQuest — AI Quiz Generator</h3>
+            <p data-i18n="projects.p5Desc">
               Web app that generates custom programming questions across topics and languages using
               the Gemini AI model (TypeScript + Vite).
             </p>
@@ -379,30 +385,30 @@
               target="_blank"
               rel="noopener"
               class="p-link"
-              >View project <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p5Link">View project</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-file-excel p-icon"></i>
-              <span class="p-tag">Data Analytics · Statistics</span>
+              <span class="p-tag" data-i18n="projects.p6Tag">Data Analytics · Statistics</span>
             </div>
-            <h3>Survey Sampling Plan &amp; Demographics Analysis</h3>
-            <p>
+            <h3 data-i18n="projects.p6Title">Survey Sampling Plan &amp; Demographics Analysis</h3>
+            <p data-i18n="projects.p6Desc">
               Designed a statistical survey sampling plan using Slovin &amp; Cochran formulas (95% Confidence Level, 5% Margin of Error) for a 588K+ population across Kota Solo's 5 sub-districts. Calculated proportional sample distribution and built an interactive distribution donut chart in Spreadsheet/Excel.
             </p>
             <div class="p-tech"><span>Microsoft Excel</span><span>Google Sheets</span><span>Statistics</span><span>Data Visualization</span></div>
-            <a href="#contact" class="p-link">View details <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="p-link"><span data-i18n="projects.p6Link">View details</span> <i class="fas fa-arrow-right"></i></a>
           </article>
 
           <article class="project-card reveal">
             <div class="p-top">
               <i class="fas fa-database p-icon"></i>
-              <span class="p-tag">Database</span>
+              <span class="p-tag" data-i18n="projects.p7Tag">Database</span>
             </div>
-            <h3>Pharmacy Database</h3>
-            <p>
+            <h3 data-i18n="projects.p7Title">Pharmacy Database</h3>
+            <p data-i18n="projects.p7Desc">
               Designed a pharmacy database using DDL/DML, inner &amp; outer joins, views, and stored
               procedures for efficient storage and management of pharmacy data.
             </p>
@@ -410,7 +416,7 @@
               <span>SQL</span><span>MySQL</span><span>Stored Procedures</span>
             </div>
             <a href="#contact" class="p-link"
-              >Details on request <i class="fas fa-arrow-right"></i
+              ><span data-i18n="projects.p7Link">Details on request</span> <i class="fas fa-arrow-right"></i
             ></a>
           </article>
         </div>
@@ -420,32 +426,32 @@
     <!-- SKILLS -->
     <section class="section" id="skills">
       <div class="container">
-        <p class="section-label reveal">what I use</p>
-        <h2 class="section-title reveal">Skills &amp; Tools</h2>
+        <p class="section-label reveal" data-i18n="skills.label">what I use</p>
+        <h2 class="section-title reveal" data-i18n="skills.title">Skills &amp; Tools</h2>
         <div class="skills-grid">
           <div class="skill-group reveal">
-            <h3><i class="fas fa-code"></i> Programming</h3>
+            <h3><i class="fas fa-code"></i> <span data-i18n="skills.programming">Programming</span></h3>
             <div class="skill-chips">
               <span>Python</span><span>SQL</span><span>HTML/CSS</span><span>Bootstrap</span
               ><span>C++ (OOP)</span><span>Scratch/PictoBlox</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3><i class="fas fa-chart-pie"></i> Data Analysis</h3>
+            <h3><i class="fas fa-chart-pie"></i> <span data-i18n="skills.dataAnalysis">Data Analysis</span></h3>
             <div class="skill-chips">
               <span>Pandas</span><span>NumPy</span><span>Matplotlib</span><span>Tableau</span
               ><span>Microsoft Excel</span><span>Streamlit</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3><i class="fas fa-robot"></i> Machine Learning</h3>
+            <h3><i class="fas fa-robot"></i> <span data-i18n="skills.machineLearning">Machine Learning</span></h3>
             <div class="skill-chips">
               <span>LSTM</span><span>ARIMAX</span><span>SARIMA</span
               ><span>Scikit-learn (basic)</span><span>Predictive Modeling</span>
             </div>
           </div>
           <div class="skill-group reveal">
-            <h3><i class="fas fa-toolbox"></i> Tools</h3>
+            <h3><i class="fas fa-toolbox"></i> <span data-i18n="skills.tools">Tools</span></h3>
             <div class="skill-chips">
               <span>VS Code</span><span>Git / GitHub</span><span>Google Colab</span
               ><span>Tableau Public</span><span>DBeaver</span><span>MySQL</span
@@ -459,47 +465,47 @@
     <!-- ACHIEVEMENT -->
     <section class="section section-dark" id="achievement">
       <div class="container">
-        <p class="section-label reveal">milestones</p>
-        <h2 class="section-title reveal">Achievements</h2>
+        <p class="section-label reveal" data-i18n="achievement.label">milestones</p>
+        <h2 class="section-title reveal" data-i18n="achievement.title">Achievements</h2>
         <div class="ach-grid">
           <div class="ach-card reveal">
             <i class="fas fa-award"></i>
-            <h3>MSIB Kampus Merdeka Batch 7</h3>
-            <p>
+            <h3 data-i18n="achievement.a1Title">MSIB Kampus Merdeka Batch 7</h3>
+            <p data-i18n="achievement.a1Desc">
               Completed Data Analytics for Business at Bitlabs Academy — score
               <strong>80.45/100</strong>.
             </p>
           </div>
           <div class="ach-card reveal">
             <i class="fas fa-users"></i>
-            <h3>Deputy Chair</h3>
-            <p>Nusantara Code (NCode) community — organized programming events for students.</p>
+            <h3 data-i18n="achievement.a2Title">Deputy Chair</h3>
+            <p data-i18n="achievement.a2Desc">Nusantara Code (NCode) community — organized programming events for students.</p>
           </div>
           <div class="ach-card reveal">
             <i class="fas fa-trophy"></i>
-            <h3>Gemastik XV</h3>
-            <p>Selected participant in the 2022 ICT Scientific Writing Competition.</p>
+            <h3 data-i18n="achievement.a3Title">Gemastik XV</h3>
+            <p data-i18n="achievement.a3Desc">Selected participant in the 2022 ICT Scientific Writing Competition.</p>
           </div>
           <div class="ach-card reveal">
             <i class="fas fa-lightbulb"></i>
-            <h3>Inotek &amp; PKM</h3>
-            <p>
+            <h3 data-i18n="achievement.a4Title">Inotek &amp; PKM</h3>
+            <p data-i18n="achievement.a4Desc">
               Founded + presented at Inotek Nganjuk/Kediri 2023-2024 and PKM-KC 2024 (IoT &amp; SVR
               projects).
             </p>
           </div>
           <div class="ach-card reveal">
             <i class="fas fa-microchip"></i>
-            <h3>PKL IoT Projects</h3>
-            <p>
+            <h3 data-i18n="achievement.a5Title">PKL IoT Projects</h3>
+            <p data-i18n="achievement.a5Desc">
               Designed &amp; presented automated tools — smart window, incubator temperature
               monitoring (Metamorphosis Kupu-Kupu).
             </p>
           </div>
           <div class="ach-card reveal">
             <i class="fas fa-language"></i>
-            <h3>TOEFL</h3>
-            <p>Certified in English (reading &amp; writing proficiency).</p>
+            <h3 data-i18n="achievement.a6Title">TOEFL</h3>
+            <p data-i18n="achievement.a6Desc">Certified in English (reading &amp; writing proficiency).</p>
           </div>
         </div>
       </div>
@@ -508,17 +514,17 @@
     <!-- CERTIFICATIONS -->
     <section class="section" id="certification">
       <div class="container">
-        <p class="section-label reveal">credentials</p>
-        <h2 class="section-title reveal">Certifications</h2>
+        <p class="section-label reveal" data-i18n="certification.label">credentials</p>
+        <h2 class="section-title reveal" data-i18n="certification.title">Certifications</h2>
         <div class="cert-table-wrap reveal">
           <table class="cert-table">
             <thead>
               <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Organizer</th>
-                <th>Date</th>
-                <th>Credential</th>
+                <th data-i18n="certification.colNum">#</th>
+                <th data-i18n="certification.colName">Name</th>
+                <th data-i18n="certification.colOrg">Organizer</th>
+                <th data-i18n="certification.colDate">Date</th>
+                <th data-i18n="certification.colCred">Credential</th>
               </tr>
             </thead>
             <tbody>
@@ -533,6 +539,7 @@
                     href="https://drive.google.com/file/d/1OtyqvS585rmRi1JFmo_00i1ByXqcCKhU/view?usp=drive_link"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -548,6 +555,7 @@
                     href="https://drive.google.com/file/d/1S_-KmU6PJulnedX7gU0yXIUSD7K7iM8u/view?usp=sharing"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -563,6 +571,7 @@
                     href="https://drive.google.com/file/d/1Hp4mp8AYFx9qRTJpU6J0kI9WlvaZM9gW/view?usp=drive_link"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -578,6 +587,7 @@
                     href="https://drive.google.com/file/d/1cD0DFu3BVVMZK40D_8DzjpKN8xgcHzuU/view?usp=sharing"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -593,6 +603,7 @@
                     href="https://drive.google.com/drive/u/1/folders/1FCxiwu37J-vN9aQeKY-WBMAZp_zOAhis"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -608,6 +619,7 @@
                     href="https://drive.google.com/file/d/1cAGhV0SycG-XK8yMOJmaERmoack8IvGn/view"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -623,6 +635,7 @@
                     href="https://drive.google.com/file/d/12UZeycCujyyJfoV4eyZI0rnXa5DZCxew/view?usp=sharing"
                     target="_blank"
                     rel="noopener"
+                    data-i18n="certification.viewBtn"
                     >View</a
                   >
                 </td>
@@ -636,9 +649,9 @@
     <!-- CONTACT -->
     <section class="section section-accent" id="contact">
       <div class="container">
-        <p class="section-label reveal">let's talk</p>
-        <h2 class="section-title reveal">Get In Touch</h2>
-        <p class="contact-note reveal">
+        <p class="section-label reveal" data-i18n="contact.label">let's talk</p>
+        <h2 class="section-title reveal" data-i18n="contact.title">Get In Touch</h2>
+        <p class="contact-note reveal" data-i18n="contact.note">
           Open to Data Analyst, Business Intelligence, and Web Development opportunities.
         </p>
         <div class="contact-links reveal">
@@ -661,7 +674,7 @@
           </a>
         </div>
         <p class="copy">
-          © <span id="year"></span> Erwin Setiawan — Built with passion &amp; data.
+          © <span id="year"></span> <span data-i18n="contact.copy">Erwin Setiawan — Built with passion &amp; data.</span>
         </p>
       </div>
     </section>
@@ -670,6 +683,7 @@
       <i class="fas fa-arrow-up"></i>
     </button>
 
+    <script src="assets/stylesheet/i18n.js"></script>
     <script src="assets/stylesheet/app.js"></script>
   </body>
 </html>

@@ -105,6 +105,41 @@ img {
   color: var(--text);
   background: rgba(255, 255, 255, 0.06);
 }
+/* ---------- LANG SWITCHER ---------- */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 3px;
+}
+.lang-btn {
+  background: transparent;
+  border: none;
+  color: var(--muted);
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  letter-spacing: 0.5px;
+}
+.lang-btn:hover {
+  color: var(--text);
+}
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--accent), #0891b2);
+  color: #04222b;
+  box-shadow: 0 2px 8px rgba(34, 211, 238, 0.3);
+}
 .hamburger {
   display: none;
   background: none;
